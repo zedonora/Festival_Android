@@ -1,0 +1,36 @@
+<html> 
+    <script language="javascript">  
+        function changeFace() { 
+            document.getElementById("face").src="face_angry.png"; 
+        };
+        function aa(){
+            try{
+                //android native function 호출
+                window.JSInterface.setSmile("안녕? 반장&뉴욕");
+            }catch(event) {
+                console.log(event);
+            }
+            <!--// 아이폰용도 설정해줘야 한다.-->
+            <!--try{-->
+                <!--//android native function 호출-->
+                <!--window.JSInterface.setSmile("안녕? 반장&뉴욕");-->
+            <!--}catch(event) {-->
+                <!--console.log(event);-->
+            <!--}-->
+        };
+    </script> 
+<body> 
+    <a onClick="aa()">
+    <!--<a onClick="window.JSInterface.setSmile('안녕? 반장&뉴욕')">-->
+        <div style="width:120px;
+            margin:0px auto; 
+            padding:10px; 
+            text-align:center; 
+            border:2px solid #202020;" 
+            > 
+        <img id="face" src="face_normal.png"/>
+        <br>  
+    </div>
+    </a> 
+ </body> 
+ </html>
